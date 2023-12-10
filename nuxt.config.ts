@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  
   spaLoadingTemplate:true,
   components: [
     {
@@ -8,20 +9,23 @@ export default defineNuxtConfig({
      pathPrefix: false,
     },
   ],
-  routeRules: {
-    // all routes (by default) will be revalidated every 60 seconds, in the background
-    '/**': { isr: 60 },
-    // this page will be generated on demand and then cached permanently
-    '/static': { isr: true },
-    // this page is generated at build time and cached permanently
-    // '/prerendered': { prerender: true },
-    // this page will be always fresh
-    //  '/dynamic': { isr: false },
-    // you can do lots more with route rules too!
-    '/redirect': { redirect: '/static' },
-    '/headers': { headers: { 'x-magic-of': 'nuxt and vercel' } },
-    '/spa': { ssr: false },
-  },
+  // routeRules: {
+  //   // all routes (by default) will be revalidated every 60 seconds, in the background
+  //   '/**': { isr: 60 },
+  //   // this page will be generated on demand and then cached permanently
+  //   '/static': { isr: true },
+  //   // this page is generated at build time and cached permanently
+  //   // '/prerendered': { prerender: true },
+  //   // this page will be always fresh
+  //   //  '/dynamic': { isr: false },
+  //   // you can do lots more with route rules too!
+  //   '/redirect': { redirect: '/static' },
+  //   '/headers': { headers: { 'x-magic-of': 'nuxt and vercel' } },
+  //   '/spa': { ssr: false },
+  // },
+  // build: {
+    
+  // },
   pwa: {
     manifest: {
       name: '/',
