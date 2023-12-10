@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     // all routes (by default) will be revalidated every 60 seconds, in the background
     '/**': { isr: 60 },
     // this page will be generated on demand and then cached permanently
-    '/static': { ssr: true },
+    '/static': { isr: true },
     // this page is generated at build time and cached permanently
     // '/prerendered': { prerender: true },
     // this page will be always fresh
@@ -22,6 +22,37 @@ export default defineNuxtConfig({
     '/headers': { headers: { 'x-magic-of': 'nuxt and vercel' } },
     '/spa': { ssr: false },
   },
+  pwa: {
+    manifest: {
+      name: '/',
+      short_name: 'home',
+      description: 'Supporters',
+      lang: 'en',
+      theme_color: '#ffffff',
+      display: 'standalone',
+    },
+    workbox: {
+      runtimeCaching: [
+        {
+          urlPattern: 'https://management-system-olive.vercel.app/.*',
+          handler: 'CacheFirst',
+          method: 'GET',
+          
+        },
+        {
+          urlPattern: 'https://fonts.gstatic.com/.*',
+          handler: 'CacheFirst',
+          method: 'GET',
+         
+        },
+       
+        
+      ],
+    },
+  
+  
+  },
+    
   app: {
     head: {
       charset: 'utf-8',
