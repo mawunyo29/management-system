@@ -1,8 +1,8 @@
-<script lang="ts" setup></script>
+<script  setup></script>
 
 <template>
   <div>
-    Page: foo
+   <h1>Dashboard</h1>
   </div>
 </template>
 
