@@ -168,23 +168,14 @@ const formations = reactive({
       description: 'Formation intensive en alternance de 1 an en téléprésentiel pour devenir développeur d\'application.\n' +
         ' Développement d\'application web et mobile\n' +
         '. Développement d\'application desktop\n' +
-        '. Développement d\'application embarquée\n',
+        '. Archicture logiciel\n',
       url: 'https://oclock.io/formations/developpeur-web',
       color: 'border-[#FF00FF]',
       experience: '5 mois',
       progress: 80,
       bar: '#FF00FF'
     },
-    {
-      name: 'Formation Développeur web et mobile',
-      school: 'Ecole O\'clock',
-      description: 'Formation intensive de 5 mois en téléprésentiel pour devenir développeur web et mobile',
-      url: 'https://oclock.io/formations/developpeur-web',
-      color: 'border-[#1A008F]',
-      experience: '5 mois',
-      progress: 80,
-      bar: '#1A008F'
-    },
+    
   ],
   '2020': [
     {
@@ -228,8 +219,8 @@ const formations = reactive({
   '1995': [
     {
       name: 'Baccalauréat série D',
-      school: 'Lycée de Kpalimé',
-      description: 'Baccalauréat série D',
+      school: 'Lycée de Tokoin',
+      description: 'Baccalauréat série Scientifique',
       color: 'border-[#FF00FF]',
 
       progress: 100,
@@ -375,10 +366,10 @@ const height = ref('calc(100vh - 350px)')
 
         </div>
       </section>
-      <section class="sm:flex w-full sm:justify-between  my-8">
+      <section class="flex flex-col  my-8">
         <div class="rounded-md">
           <div
-            class="block  p-6 m-2 divide-y divide-zinc-600  bg-white border-l-8 rounded-lg shadow-md sm:max-w-sm hover:bg-gray-300 hover:transition-all hover:ease-in-out hover:duration-200 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            class="block  p-6 m-2 divide-y divide-zinc-600  bg-white border-l-8 rounded-lg shadow-md  hover:bg-gray-300 hover:transition-all hover:ease-in-out hover:duration-200 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
             <h1 class="flex items-center w-full mb-4 text-3xl font-bold text-center uppercase ">Formations</h1>
             <div v-for="(item, index) in formations" :key="item">
               <p class="py-2">{{ index }}</p>

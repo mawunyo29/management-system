@@ -26,7 +26,7 @@ const textToType = 'Passionné par le développement web et mobile.\n' +
     ' J\'ai également traivaillé sur des projets complex Chez Pythagore .\n'+
     ' J\'ai aussi appris le framework JavaScript VueJS. J\'ai aussi appris le framework Ionic pour le développement mobile.\n'+
    ` ${linkurl.value}`+
- '\n . Au cours de mon apprentissage, j\'ai appris à utiliser les bases de données relationnelles et non relationnelles. J\'ai aussi appris à utiliser les outils de versionning comme Git et Github.\n'+
+ '\n. Au cours de mon apprentissage, j\'ai appris à utiliser les bases de données relationnelles et non relationnelles. J\'ai aussi appris à utiliser les outils de versionning comme Git et Github.\n'+
 'J\'ai aussi appris à utiliser les outils de gestion de projet comme Trello et Jira. J\' ai des notions en gestion de prject avec la méthode agile SCRUM, architecture logicielle et conception de base de données. Je suis disponible pour travailler sur des projets web et mobiles. Je suis ouvert à toute proposition de collaboration. N\'hésitez pas à me contacter pour toute proposition de collaboration. '
 useHead({
     title: 'À propos de nous',
