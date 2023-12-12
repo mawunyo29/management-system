@@ -2,6 +2,7 @@
 
 import { ref, computed, onMounted, watch, watchEffect, nextTick, onUnmounted } from 'vue'
 
+<<<<<<< HEAD
 useHead({
     title: 'Home',
     titleTemplate: '%s home' + 'Mon site',
@@ -12,6 +13,8 @@ useHead({
         }
     ]
 })
+=======
+>>>>>>> parent of ec2e0bd (update package js)
 
 const images = ref([
   'https://picsum.photos/1920/1080/?random',
