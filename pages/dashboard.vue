@@ -1,4 +1,16 @@
-<script  setup></script>
+<script  setup>
+
+useHead({
+    title: 'Dashboard',
+    titleTemplate: '%s  Dashboard ' + 'Mon site',
+    meta: [
+        {
+            name: 'description',
+            content: 'Bienvenue sur notre page "À propos".'
+        }
+    ]
+})
+</script>
 
 <template>
   <div>

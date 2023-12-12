@@ -2,6 +2,16 @@
 
 import { ref, computed, onMounted, watch, watchEffect, nextTick, onUnmounted } from 'vue'
 
+useHead({
+    title: 'Home',
+    titleTemplate: '%s  | ' + 'Mon site',
+    meta: [
+        {
+            name: 'description',
+            content: 'Bienvenue sur notre page "À propos".'
+        }
+    ]
+})
 
 const images = ref([
   'https://picsum.photos/1920/1080/?random',
