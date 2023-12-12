@@ -4,7 +4,7 @@ import { ref, computed, onMounted, watch, watchEffect, nextTick, onUnmounted } f
 
 useHead({
     title: 'Home',
-    titleTemplate: '%s  | ' + 'Mon site',
+    titleTemplate: '%s home' + 'Mon site',
     meta: [
         {
             name: 'description',
