@@ -2,9 +2,9 @@
   <div>
     <div>
       <el-affix :offset="0">
-        <el-page-header class="sm:hidden bg-[#2A2B48] text-white h-10 p-2" @back="goBack()" background-color="#2A2B48">
+        <el-page-header class="sm:propertyden bg-[#2A2B48] text-white h-10 p-2" @back="goBack()" background-color="#2A2B48">
         </el-page-header>
-        <div class="hidden sm:block">
+        <div class="propertyden sm:block">
           <el-menu class="" mode="horizontal" :ellipsis="false" @select="handleSelect"
             :default-active="currentRouteActive" :router="true" active-text-color="#ffd04b" background-color="#2A2B48"
             :class="'w-full  fixed top-0 left-0 right-0 z-50 '" text-color="#fff">
@@ -33,7 +33,7 @@
       </el-affix>
     </div>
 
-    <div class="container fixed bottom-0 left-0 right-0 flex items-center justify-center h-8 mx-auto sm:hidden z-50">
+    <div class="container fixed bottom-0 left-0 right-0 flex items-center justify-center h-8 mx-auto sm:propertyden z-50">
       <el-menu class="w-full" mode="horizontal" active-text-color="#ffd04b" background-color="#2A2B48"
         :router=true v-bind:default-active="currentRouteActive" text-color="#fff">
         <el-menu-item index="/">
@@ -77,7 +77,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script  setup>
 import { ref, computed } from 'vue'
 let currentRoute = useRoute()
 let router = useRouter()
@@ -88,8 +88,79 @@ const currentRouteActive = computed({
 
   }
 })
+useHead(
+  {
+    title: 'The Goal',
+    meta: [
+      {
+        property: 'description',
+        name: 'description',
+        content: 'The Goal'
+      },
+      {
+        property: 'twitter:card',
+        name: 'twitter',
+        content: 'ummary_large_image'
+      },
+      {
+        property: 'twitter:image',
+        name: 'Twitter',
+        content: 'Twitter link preview image URL'
+        
+      },
+      {
+        property: 'twitter:link',
+        name: 'Twitter',
+        content: 'Twitter link preview image URL'
+        
+      },
+      {
+        property: 'og:title',
+        property: 'og:title',
+        content: 'Link preview title'
+      },
+      {
+        property: 'twitter:description',
+        name: 'Twitter',
+        content: 'Twitter link preview description'
+      },
+      {
+        property: 'og:image',
+        property: 'og:image',
+        content: 'The Goal'
+      },
+      {
+        property: 'og:url',
+        property: 'og:url',
+        content: 'The Goal'
+      },
+      {
+        property: 'description',
+        name: 'twitter:title',
+        content: 'Search engine description'
+      },
+      {
+        property: 'twitter:description',
+        name: 'twitter:description',
+        content: 'The Goal'
+      },
+      {
+        property: 'twitter:image',
+        name: 'twitter:image',
+        content: 'The Goal'
+      },
+      {
+        property: 'twitter:card',
+        name: 'twitter:card',
+        content: 'The Goal'
+      }
+
+    ]
+  }
+)
+
 const activeIndex = ref('1')
-const handleSelect = (key: string, keyPath: string[]) => {
+const handleSelect = (key, keyPath =[]) => {
   console.log(key, keyPath)
 
 }
@@ -97,6 +168,7 @@ const backUrl = computed(() => {
   //return to the previous page
   return currentRoute.fullPath
 })
+
 
 const goBack = () => {
   router.back()
