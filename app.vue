@@ -1,9 +1,9 @@
 <template>
   <div class="antialiased bg-slate-200">
     <Header />
-    <template v-if="loading">
-      <NuxtLoadingIndicator :throttle="20" color="#2FE5FF" :height="100" :duration="500" />
-    </template>
+    
+    <VitePwaManifest />
+    <NuxtLoadingIndicator />
     <div class="flex items-center justify-center min-h-screen">
 
       <NuxtPage :transition="true" :keepalive="true" />
