@@ -1,6 +1,3 @@
-
-import { NuxtConfigSchema } from '@nuxt/schema';
-
 <template>
   <div class="antialiased bg-slate-200">
     <Header />
