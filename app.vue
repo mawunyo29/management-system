@@ -1,8 +1,6 @@
 <template>
   <div class="antialiased bg-slate-200">
     <Header />
-    
-    <VitePwaManifest />
     <NuxtLoadingIndicator />
     <div class="flex items-center justify-center min-h-screen">
 
