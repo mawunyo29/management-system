@@ -39,36 +39,36 @@ export default defineNuxtConfig({
   // // build: {
 
   // // },
-  // pwa: {
-  //   manifest: {
-  //     name: '/',
-  //     short_name: 'home',
-  //     description: 'Supporters',
-  //     lang: 'en',
-  //     theme_color: '#ffffff',
-  //     display: 'standalone',
-  //   },
-  //   workbox: {
-  //     runtimeCaching: [
-  //       {
-  //         urlPattern: 'https://management-system-olive.vercel.app/.*',
-  //         handler: 'CacheFirst',
-  //         method: 'GET',
+  pwa: {
+    manifest: {
+      name: '/',
+      short_name: 'home',
+      description: 'Supporters',
+      lang: 'en',
+      theme_color: '#ffffff',
+      display: 'standalone',
+    },
+    workbox: {
+      runtimeCaching: [
+        {
+          urlPattern: '/.*',
+          handler: 'CacheFirst',
+          method: 'GET',
 
-  //       },
-  //       {
-  //         urlPattern: 'https://fonts.gstatic.com/.*',
-  //         handler: 'CacheFirst',
-  //         method: 'GET',
+        },
+        {
+          urlPattern: 'https://fonts.gstatic.com/.*',
+          handler: 'CacheFirst',
+          method: 'GET',
 
-  //       },
-
-
-  //     ],
-  //   },
+        },
 
 
-  // },
+      ],
+    },
+
+
+  },
 
   // app: {
   //   head: {
