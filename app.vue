@@ -10,7 +10,7 @@
     <el-backtop :right="100" :bottom="100" />
   </div>
 </template>
-<script setup lang="ts">
+<script setup >
 const nuxtApp = useNuxtApp();
 const loading = ref(false);
 nuxtApp.hook("page:start", () => {
